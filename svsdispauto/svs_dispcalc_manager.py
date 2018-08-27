@@ -15,15 +15,15 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-17set10-18jul31')
+DIR_BASE = os.path.join('.', 'base-18jul01-18jul31')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2017set10_2018jul31.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018jul01_2018jul31.csv'
 #CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
 CSV_MATRIZ_DELIMITADOR = ','
 
 #--CONFIG DOS CHAMADOS---------------------------
 CSV_CHAMADOS = 'base_chamados.csv'
-CHAMADOS_LISTA_IDS = [468, 559, 570, 1034,1042, 1106, 1128, 1245 ,1251, 1166, 1265, 1276, 1371, 1372, 1417, 1433, 1459, 1471, 1482, 1509, 1523, 1526, 1542, 1543]
+CHAMADOS_LISTA_IDS = [468, 559, 570, 1034,1042, 1106, 1128, 1245 ,1251, 1166, 1265, 1276, 1371, 1372, 1417, 1433, 1459, 1471, 1482, 1509,1520,1526,1531,1542,1543]
 
 #--CSV com Info dos Enlaces------------------------
 CSV_ENLACES_FILEPATH = os.path.join('..', 'enlaces_base.csv')
@@ -39,7 +39,7 @@ CSV_FIELD_SITIO_HORIZ_B = 'HORIZ. B'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2017-09-10 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2018-07-01 00:00:00', '%Y-%m-%d %H:%M:%S')
 report_end = datetime.datetime.strptime('2018-07-31 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
@@ -193,7 +193,7 @@ print lista_enlaces
 
 #====================== EXTRACAO DADOS ENLACES ============================================================
 for enl in lista_enlaces:
-#     #Extrai os dados de gerais do enlace
+     #Extrai os dados de gerais do enlace
      extrai_dados_enlace(sitio_A=enl['sitio_A'], sitio_B=enl['sitio_B'], trunk=enl['trunk'],trunk_bkp=enl['trunk_bkp'], dir_base=DIR_BASE,
                          spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
                          spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,
@@ -203,7 +203,7 @@ for enl in lista_enlaces:
 
 #====================== EXTRACAO DADOS SITIOS ============================================================
 for sit in lista_sitios:
-#     #Extrai dados especificos do sitio
+     #Extrai dados especificos do sitio
      extrai_dados_sitio(sitio=sit, dir_base=DIR_BASE, spk_executor_ref=spk_executor,
                         spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
                         spk_sysups_sourcetype=SPK_SYSUPS_SOURCETYPE,

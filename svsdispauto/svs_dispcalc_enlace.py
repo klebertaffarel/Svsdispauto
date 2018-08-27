@@ -31,7 +31,7 @@ def extrai_dados_enlace(sitio_A, sitio_B, trunk, trunk_bkp, dir_base=None, spk_e
                              output_file=arq_path)
 
         #OPERSTATUS - COM COLETA, mas Nao-OK ---------------------------------------------------------------------------
-        str_search_nok = spk_searchs_factory.search_operstatus_nok(host_swl3=sit, trunk=trunk, spk_index='zabbix',
+        str_search_nok = spk_searchs_factory.search_operstatus_nok(host_swl3=sit, trunk=trunk, trunk_bkp=trunk_bkp, spk_index='zabbix',
                                                                           spk_sourcetype=spk_operstatus_sourcetype,
                                                                           spk_source=spk_operstatus_source)
         if DEBUG_MODE: print 'str_search:', str_search_nok

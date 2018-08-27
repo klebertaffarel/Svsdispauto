@@ -9,13 +9,13 @@ def search_operstatus_semcoleta(host_swl3, trunk, trunk_bkp, spk_index=CFG_SPK_Z
         search index="<<<%SPK_INDEX%>>>" sourcetype=<<<%SPK_SOURCETYPE%>>> source="<<<%SPK_SOURCE%>>>"
         | lookup tstrod_lookups_items.csv itemid
         | lookup tstrod_lookups_hosts.csv hostid  
-        | search host_name="*<<<%HOST%>>>" AND item_key=*Trunk*Port*ID*<<<%TRUNK%>>>* OR item_key=*Trunk32<<<%TRUNK_BKP%>>>*
-        | sort 0 itemid, _time
-        | streamstats current=true window=2 earliest(clock) as last_clock, earliest(itemid) as last_itemid, earliest(datetime) as last_datetime by itemid
+        | search host_name="*<<<%HOST%>>>*" AND item_key=*Trunk*Port*ID*<<<%TRUNK%>>>* OR item_key=*Trunk32<<<%TRUNK_BKP%>>>*
+        | sort 0 _time
+        | streamstats current=true window=2 earliest(clock) as last_clock, earliest(itemid) as last_itemid, earliest(datetime) as last_datetime
         | eval diff_itemid=last_itemid - itemid
         | eval last_clock = last_clock
         | eval delta_tempo = (clock - last_clock) 
-        | eval is_faltacoleta = IF((_time > strptime("2018-07-01 00:00", "%Y-%m-%d %H:%M") AND delta_tempo >= 2.5*60) OR (_time <= strptime("2018-07-01 00:00", "%Y-%m-%d %H:%M") AND delta_tempo > 2.5*300), 1, 0)
+        | eval is_faltacoleta = IF((_time > strptime("2017-09-20 19:50", "%Y-%m-%d %H:%M") AND delta_tempo >= 2.5*60) OR (_time <= strptime("2017-09-20 19:50", "%Y-%m-%d %H:%M") AND delta_tempo > 2.5*300), 1, 0)
         | eval is_faltacoleta = IF(delta_tempo > 3500 AND delta_tempo <= 3800 AND (strftime(_time, "%Y-%m-%d %H")="2018-02-17 23" OR strftime(_time, "%Y-%m-%d %H")="2018-02-18 00"),0,is_faltacoleta) 
         | where  is_faltacoleta=1
         | table last_datetime, datetime, host_name, item_key, delta_tempo
@@ -34,7 +34,7 @@ def search_operstatus_semcoleta(host_swl3, trunk, trunk_bkp, spk_index=CFG_SPK_Z
 
 
 
-def search_operstatus_nok(host_swl3, trunk, spk_index=CFG_SPK_ZAB_INDEX,
+def search_operstatus_nok(host_swl3, trunk, trunk_bkp, spk_index=CFG_SPK_ZAB_INDEX,
                                     spk_sourcetype=CFG_SPK_ZAB_SOURCETYPE, spk_source=None):
         str_search = """
         search index="<<<%SPK_INDEX%>>>" sourcetype=<<<%SPK_SOURCETYPE%>>> source="<<<%SPK_SOURCE%>>>"
@@ -49,7 +49,7 @@ def search_operstatus_nok(host_swl3, trunk, spk_index=CFG_SPK_ZAB_INDEX,
             | eval delta_tempo = (clock - last_clock) 
             | eval is_opersts_nOk = IF(value=1,0,1)
             | eval tempo_opersts_nOk = IF(is_opersts_nOk=1,
-                                                  IF(_time > strptime("2017-09-20 19:50", "%Y-%m-%d %H:%M"),60, 300),
+                                                   IF(_time > strptime("2017-09-20 19:50", "%Y-%m-%d %H:%M"),60, 300),
                                              "")
             |search delta_value!=0 
             |streamstats current=true window=2 earliest(delta_value) AS perini_delta_value, earliest(datetime) as perini_datetime, earliest(clock) as perini_clock
@@ -65,6 +65,7 @@ def search_operstatus_nok(host_swl3, trunk, spk_index=CFG_SPK_ZAB_INDEX,
 
         str_search = str_search.replace("<<<%HOST%>>>", host_swl3 + "_SWL3")
         str_search = str_search.replace("<<<%TRUNK%>>>", str(trunk))
+        str_search = str_search.replace("<<<%TRUNK_BKP%>>>", str(trunk_bkp))
 
         return str_search
 
