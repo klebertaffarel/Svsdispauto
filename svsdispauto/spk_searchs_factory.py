@@ -1,4 +1,3 @@
-
 CFG_SPK_ZAB_INDEX='zabbix'
 CFG_SPK_ZAB_SOURCETYPE='zabdb_history'
 
@@ -142,9 +141,9 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
     #template_sitio_indisp = "| eval <<<%HOST%>>>_<<<%TRUNK%>>>_indisp=IF(<<<%HOST%>>>_SCol_<<<%TRUNK%>>>==1 OR <<<%HOST%>>>_nOk_<<<%TRUNK%>>>==1,1,0)"
     #--Aqui calculado com um threshold em cima do valor minimo de threshold da janela de disponibilidade------
     #- HOST_TRUNK_indisp
-    template_sitio_indisp = "| eval <<<%HOST%>>>_<<<%TRUNK%>>>_indisp=IF(<<<%HOST%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP OR <<<%HOST%>>>_nOk_<<<%TRUNK%>>>==1,1,0)"
+    template_sitio_indisp = "| eval <<<%HOST%>>>_<<<%TRUNK%>>>_indisp=IF(<<<%HOST%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP OR <<<%HOST%>>>_nOK_<<<%TRUNK%>>>==1,1,0)"
     #- HOST_TRUNK_intermit
-    template_sitio_intermit = '| eval <<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_sysup_deslig==0 AND (<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo <= CFG_THRESH_INTERMIT) AND !(<<<%HOST_B%>>>_nOk_<<<%TRUNK%>>>==1),1,0)'
+    template_sitio_intermit = '| eval <<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_sysup_deslig==0 AND (<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo <= CFG_THRESH_INTERMIT) AND !(<<<%HOST_B%>>>_nOK_<<<%TRUNK%>>>==1),1,0)'
     #- HOST_TRUNK_chamados
     template_sitio_chamados = '| eval <<<%HOST%>>>_<<<%TRUNK%>>>_chamados=IF(chamados_MS<<<%HOST%>>>==1 OR chamados_PR<<<%HOST%>>>==1,1,0)'
     #--Calcula a indisponibilidade do enlace
@@ -234,12 +233,3 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
 
 
     return str_search
-
-
-
-
-
-
-
-
-

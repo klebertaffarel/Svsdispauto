@@ -99,7 +99,3 @@ def extrai_base_chamados(lista_chamados, dir_base=None, csv_output=None, spk_exe
     svscsv_from_listdict(list_dicts=dados,
                         list_headers=['dh_inicio', 'dh_termino', 'ID', 'chamados', 'localidade_id'],
                         output_file=arq_path)
-
-
-
-

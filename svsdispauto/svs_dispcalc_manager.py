@@ -15,9 +15,9 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-18jul01-18jul31')
+DIR_BASE = os.path.join('.', 'base-17set10-18ago29')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018jul01_2018jul31.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2017set10_2018ago29.csv'
 #CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
 CSV_MATRIZ_DELIMITADOR = ','
 
@@ -39,8 +39,8 @@ CSV_FIELD_SITIO_HORIZ_B = 'HORIZ. B'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2018-07-01 00:00:00', '%Y-%m-%d %H:%M:%S')
-report_end = datetime.datetime.strptime('2018-07-31 23:59:59', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2017-09-10 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_end = datetime.datetime.strptime('2018-08-29 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
 
@@ -287,6 +287,3 @@ str_search = spk_searchs_factory.search_matriz_disponibilidade(lista_enlaces=lis
 
 #TODO Executa a consulta-base e gera um CSV com todos os detalhes
 print 'str_search:', str_search
-
-
-
