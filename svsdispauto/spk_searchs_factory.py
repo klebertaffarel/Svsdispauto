@@ -138,12 +138,14 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
         |eval ano_mes_dia=substr(time_ini,1,10)
         |fields time_ini, time_end, duration_seg, ano_mes, * """
     #Aqui esta baseado no campo binario de janela de indisponibilidade
-    #template_sitio_indisp = "| eval <<<%HOST%>>>_<<<%TRUNK%>>>_indisp=IF(<<<%HOST%>>>_SCol_<<<%TRUNK%>>>==1 OR <<<%HOST%>>>_nOk_<<<%TRUNK%>>>==1,1,0)"
+    #template_sitio_indisp = "| eval <<<%HOST%>>>_<<<%TRUNK%>>>_indisp=IF(<<<%HOST%>>>_SCol_<<<%TRUNK%>>>==1 OR <<<%HOST%>>>_nOKk_<<<%TRUNK%>>>==1,1,0)"
     #--Aqui calculado com um threshold em cima do valor minimo de threshold da janela de disponibilidade------
     #- HOST_TRUNK_indisp
     template_sitio_indisp = "| eval <<<%HOST%>>>_<<<%TRUNK%>>>_indisp=IF(<<<%HOST%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP OR <<<%HOST%>>>_nOK_<<<%TRUNK%>>>==1,1,0)"
     #- HOST_TRUNK_intermit
-    template_sitio_intermit = '| eval <<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_sysup_deslig==0 AND (<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo <= CFG_THRESH_INTERMIT) AND !(<<<%HOST_B%>>>_nOK_<<<%TRUNK%>>>==1),1,0)'
+    #--A linha abaixo foi ajustada retirando apenas a condicao de sysuptime
+    #template_sitio_intermit = '| eval <<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_sysup_deslig==0 AND (<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo <= CFG_THRESH_INTERMIT) AND !(<<<%HOST_B%>>>_nOK_<<<%TRUNK%>>>==1),1,0)'
+    template_sitio_intermit = '| eval <<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit=IF((<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo <= CFG_THRESH_INTERMIT) AND !(<<<%HOST_B%>>>_nOK_<<<%TRUNK%>>>==1),1,0)'
     #- HOST_TRUNK_chamados
     template_sitio_chamados = '| eval <<<%HOST%>>>_<<<%TRUNK%>>>_chamados=IF(chamados_MS<<<%HOST%>>>==1 OR chamados_PR<<<%HOST%>>>==1,1,0)'
     #--Calcula a indisponibilidade do enlace
@@ -160,14 +162,18 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
     template_enlace_classifind+= ')'
     #--Calcula os periodos onde nao eh possivel afirmar que os equipamentos estavam ligados, por TRUNK
     #- HOST_TRUNK_sysup_deslig
-    template_sitio_sysup_deslig_trunk ="| eval <<<%HOST%>>>_<<<%TRUNK%>>>_sysup_deslig=IF(Equipamento_MS<<<%HOST%>>>_SWL3==1 OR Equipamento_PR<<<%HOST%>>>_SWL3==1,1,0) "
+    # --A linha abaixo foi removida por nao utilizar mais os dados de sysuptime
+    #template_sitio_sysup_deslig_trunk ="| eval <<<%HOST%>>>_<<<%TRUNK%>>>_sysup_deslig=IF(Equipamento_MS<<<%HOST%>>>_SWL3==1 OR Equipamento_PR<<<%HOST%>>>_SWL3==1,1,0) "
+
     #--Calcula pro enlace os periodos onde nao eh possivel afirmar que todos os equipamentos estavam ligados
     #- HOST_AxHOST_B_sysup_deslig =
-    template_enlace_sysup_deslig = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_sysup_deslig==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_sysup_deslig==1,1,0)"
+    # --A linha abaixo foi removida por nao utilizar mais os dados de sysuptime
+    #template_enlace_sysup_deslig = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_sysup_deslig==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_sysup_deslig==1,1,0)"
     #--Calcula a disponibilidade ajustada, descontando os periodos onde pode-se afirmar que os equipamentos estavam LIGADOS e nao houve coleta do tipo "Nao-OK"
     #- HOST_AxHOST_B_sombra
 #    template_enlace_sombra = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp==1 AND <<<%HOST_A%>>>_nOk_<<<%TRUNK%>>>!=1 AND <<<%HOST_B%>>>_nOk_<<<%TRUNK%>>>!=1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig==0,1,0)"
-    template_enlace_sombra = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra=IF( (<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP) AND (<<<%HOST_B%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP) AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig==0,1,0)"
+    # --A linha abaixo foi removida por nao utilizar mais os dados de sysuptime
+    #template_enlace_sombra = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra=IF( (<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP) AND (<<<%HOST_B%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP) AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig==0,1,0)"
     #- HOST_AxHOST_B_intermitencia
     template_enlace_intermitencia = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_intermitencia=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_intermit==1,1,0)"
     #- HOST_AxHOST_B_indisp
@@ -175,20 +181,26 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
     #- HOST_AxHOST_B_chamados
     template_enlace_chamados = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_chamados==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_chamados==1,1,0)"
     #- HOST_AxHOST_B_indisp_sombras
-    template_enlace_indisp_sombras = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_sombras=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit==1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra==0,1,0)"
+    # --A linha abaixo foi removida por nao utilizar mais os dados de sombra
+    #template_enlace_indisp_sombras = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_sombras=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit==1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra==0,1,0)"
     #- HOST_AxHOST_B_indisp_chamados
     template_enlace_indisp_chamados = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_chamados=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit==1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados==0,1,0)"
     #- HOST_AxHOST_B_indisp_ajustada
-    template_enlace_indisp_ajustada = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_ajustada=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit==1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra==0 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados==0,1,0)"
+    # --A linha abaixo foi modificada por nao utilizar mais os dados de sombra
+    #template_enlace_indisp_ajustada = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_ajustada=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit==1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra==0 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados==0,1,0)"
+    template_enlace_indisp_ajustada = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_ajustada=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit==1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados==0,1,0)"
 
     #--Calcula os tempos em segundos
     template_enlace_indisp_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp"
-    template_enlace_deslig_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_deslig_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig"
-    template_enlace_sombra_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra"
+    # --A linha abaixo foi retirada por nao mais utilizarmos dados de sysuptime
+    #template_enlace_deslig_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_deslig_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig"
+    # --A linha abaixo foi retirada por nao mais utilizarmos dados de sombra
+    #template_enlace_sombra_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra"
     template_enlace_intermit_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_intermit_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_intermit"
     template_enlace_chamados_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados"
     template_enlace_indisp_intermit_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit"
-    template_enlace_indisp_sombras_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_sombras_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_sombras"
+    # --A linha abaixo foi retirada por nao mais utilizarmos dados de sombra
+    #template_enlace_indisp_sombras_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_sombras_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_sombras"
     template_enlace_indisp_ajustada_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_ajustada_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_ajustada"
     template_enlace_indisp_chamados_segundos="|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_chamados_segundos=duration_seg*<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_chamados"
 
@@ -206,27 +218,32 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
         str_search+= template_enlace_classifind.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
 
         #-Calculos de SysUp Times
-        str_search+= template_sitio_sysup_deslig_trunk.replace('<<<%HOST%>>>', enl['sitio_A']).replace('<<<%TRUNK%>>>', enl['trunk'])
-        str_search+= template_sitio_sysup_deslig_trunk.replace('<<<%HOST%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
-        str_search+= template_enlace_sysup_deslig.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        # --As linhas abaixo foram retiradas por nao mais utilizarmos dados de sombra
+        #str_search+= template_sitio_sysup_deslig_trunk.replace('<<<%HOST%>>>', enl['sitio_A']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        #str_search+= template_sitio_sysup_deslig_trunk.replace('<<<%HOST%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        #str_search+= template_enlace_sysup_deslig.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         #Aqui precisa calcular duas vezes, uma para cada lado do enlace, mas considerando ambos os sitios
         str_search+= template_sitio_intermit.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_sitio_intermit.replace('<<<%HOST_A%>>>', enl['sitio_B']).replace('<<<%HOST_B%>>>', enl['sitio_A']).replace('<<<%TRUNK%>>>', enl['trunk'])
         #-Ajuste Disponibilidade por Sombras, Intermitencia e chamados
-        str_search+= template_enlace_sombra.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        # --As linhas abaixo foram retiradas por nao mais utilizarmos dados de sombra
+        #str_search+= template_enlace_sombra.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_intermitencia.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_indisp_intermit.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
-        str_search+= template_enlace_indisp_sombras.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        # --As linhas abaixo foram retiradas por nao mais utilizarmos dados de sombra
+        #str_search+= template_enlace_indisp_sombras.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_indisp_chamados.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_indisp_ajustada.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
 
         #-Calculo em Segundos
         str_search+= template_enlace_indisp_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
-        str_search+= template_enlace_deslig_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
-        str_search+= template_enlace_sombra_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        # --As linhas abaixo foram retiradas por nao mais utilizarmos dados de sombra
+        #str_search+= template_enlace_deslig_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        #str_search+= template_enlace_sombra_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_intermit_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_chamados_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
-        str_search+= template_enlace_indisp_sombras_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
+        # --As linhas abaixo foram retiradas por nao mais utilizarmos dados de sombra
+        #str_search+= template_enlace_indisp_sombras_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_indisp_chamados_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_indisp_ajustada_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])
         str_search+= template_enlace_indisp_intermit_segundos.replace('<<<%HOST_A%>>>', enl['sitio_A']).replace('<<<%HOST_B%>>>', enl['sitio_B']).replace('<<<%TRUNK%>>>', enl['trunk'])

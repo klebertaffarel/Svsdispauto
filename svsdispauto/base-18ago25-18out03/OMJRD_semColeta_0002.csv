@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2018-09-02 03:00:10.0,2018-09-02 03:24:48.0,1478,MSOMJRD_SWL3_proxy06,Trunk322,
+2018-09-11 20:05:40.0,2018-09-11 20:08:13.0,153,MSOMJRD_SWL3,ifOperStatus[Trunk Port ID 0002],
+2018-09-24 10:03:11.0,2018-09-24 10:11:09.0,478,MSOMJRD_SWL3_proxy06,Trunk322,

@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2018-06-30 00:59:56.0,2018-06-30 01:22:06.0,1330,MSRPTCU_SWL3,ifOperStatus[Trunk Port ID 0001],
+2018-06-30 16:39:17.0,2018-06-30 18:03:46.0,5069,MSRPTCU_SWL3_proxy05,Trunk321,
+2018-07-07 00:59:56.0,2018-07-07 01:22:21.0,1345,MSRPTCU_SWL3,ifOperStatus[Trunk Port ID 0001],

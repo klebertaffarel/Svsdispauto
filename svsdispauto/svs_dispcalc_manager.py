@@ -15,15 +15,15 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-17set10-18ago29')
+DIR_BASE = os.path.join('.', 'base-18jun25-18ago05')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2017set10_2018ago29.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018jun25_2018jul05.csv'
 #CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
 CSV_MATRIZ_DELIMITADOR = ','
 
 #--CONFIG DOS CHAMADOS---------------------------
 CSV_CHAMADOS = 'base_chamados.csv'
-CHAMADOS_LISTA_IDS = [468, 559, 570, 1034,1042, 1106, 1128, 1245 ,1251, 1166, 1265, 1276, 1371, 1372, 1417, 1433, 1459, 1471, 1482, 1509,1520,1526,1531,1542,1543]
+CHAMADOS_LISTA_IDS = [468, 559, 570, 1034,1042, 1106, 1128, 1245 ,1251, 1166, 1265, 1276, 1371, 1372, 1417, 1433, 1459, 1471, 1482, 1509,1520,1523,1526,1531,1542,1543, 1624,1692,1719,1720,1721]
 
 #--CSV com Info dos Enlaces------------------------
 CSV_ENLACES_FILEPATH = os.path.join('..', 'enlaces_base.csv')
@@ -39,8 +39,8 @@ CSV_FIELD_SITIO_HORIZ_B = 'HORIZ. B'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2017-09-10 00:00:00', '%Y-%m-%d %H:%M:%S')
-report_end = datetime.datetime.strptime('2018-08-29 23:59:59', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2018-06-25 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_end = datetime.datetime.strptime('2018-08-05 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
 
@@ -77,8 +77,8 @@ SPK_PASSWD = 'nocnoc'
 SPK_OPERSTATUS_SOURCE='novo_import*'
 SPK_OPERSTATUS_SOURCETYPE='novo_zabdb_history*'
 #--SysUp Times
-SPK_SYSUPS_SOURCE='zab_hist_sysuptime'
-SPK_SYSUPS_SOURCETYPE='zabdb_history'
+#SPK_SYSUPS_SOURCE='zab_hist_sysuptime'
+#SPK_SYSUPS_SOURCETYPE='zabdb_history'
 
 #Envio da Matriz ao Splunk
 dest_mat_scp_host='10.254.22.79'
@@ -89,15 +89,15 @@ dest_mat_scp_dir = '/var/opt/splunk/var/run/splunk/csv/'
 
 
 #====================== INICIALIZACAO ========================================================================
-if os.path.exists(DIR_BASE):
-    shutil.rmtree(DIR_BASE)
+#if os.path.exists(DIR_BASE):
+ #   shutil.rmtree(DIR_BASE)
 
 #Checa se o diretorio existe
-if os.path.exists(DIR_BASE):
-    raise Exception("Erro, apague o diretorio para iniciar a geracao!")
+#if os.path.exists(DIR_BASE):
+ #   raise Exception("Erro, apague o diretorio para iniciar a geracao!")
 
 #Cria o diretorio
-os.mkdir(DIR_BASE)
+#os.mkdir(DIR_BASE)
 
 #Inicializa um gerenciador da interacao com Splunk
 spk_executor = SvsSpkExecutor(SPK_HOST, SPK_USER, SPK_PASSWD)
@@ -192,27 +192,27 @@ if DEBUG_MODE: print 'lista_enlaces:', lista_enlaces
 print lista_enlaces
 
 #====================== EXTRACAO DADOS ENLACES ============================================================
-for enl in lista_enlaces:
-     #Extrai os dados de gerais do enlace
-     extrai_dados_enlace(sitio_A=enl['sitio_A'], sitio_B=enl['sitio_B'], trunk=enl['trunk'],trunk_bkp=enl['trunk_bkp'], dir_base=DIR_BASE,
-                         spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
-                         spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,
-                         spk_operstatus_source=SPK_OPERSTATUS_SOURCE)
+#for enl in lista_enlaces:
+#     #Extrai os dados de gerais do enlace
+#     extrai_dados_enlace(sitio_A=enl['sitio_A'], sitio_B=enl['sitio_B'], trunk=enl['trunk'],trunk_bkp=enl['trunk_bkp'], dir_base=DIR_BASE,
+#                         spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
+#                         spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,
+#                         spk_operstatus_source=SPK_OPERSTATUS_SOURCE)
 
 
 
 #====================== EXTRACAO DADOS SITIOS ============================================================
-for sit in lista_sitios:
-     #Extrai dados especificos do sitio
-     extrai_dados_sitio(sitio=sit, dir_base=DIR_BASE, spk_executor_ref=spk_executor,
-                        spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
-                        spk_sysups_sourcetype=SPK_SYSUPS_SOURCETYPE,
-                        spk_sysups_source=SPK_SYSUPS_SOURCE)
+#for sit in lista_sitios:
+#     #Extrai dados especificos do sitio
+#     extrai_dados_sitio(sitio=sit, dir_base=DIR_BASE, spk_executor_ref=spk_executor,
+#                        spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
+#                        spk_sysups_sourcetype=SPK_SYSUPS_SOURCETYPE,
+#                        spk_sysups_source=SPK_SYSUPS_SOURCE)
 
 
 #====================== EXTRACAO DOS CHAMADOS ============================================================
-extrai_base_chamados(lista_chamados=CHAMADOS_LISTA_IDS, dir_base=DIR_BASE, csv_output=CSV_CHAMADOS,
-                     spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim)
+#extrai_base_chamados(lista_chamados=CHAMADOS_LISTA_IDS, dir_base=DIR_BASE, csv_output=CSV_CHAMADOS,
+#                     spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim)
 
 
 
@@ -252,12 +252,12 @@ for enl in lista_enlaces:
                                           datestr_fmt='%Y-%m-%d %H:%M:%S.%f')
 
 #---Dados dos SysUp Times--
-for sit in lista_sitios:
-    #--SysUp Times----
-    SvsCsvsMergerUtils.add_csvfile_to_drt(drt, os.path.join(DIR_BASE, sit+'_sysUps.csv'), delimitador=",",
-                                          create_constant_cols=[[sit+'_SysUpDeslig', 1]], onlycols=['Equipamento'],
-                                          create_cols_from_values_for_cols=['Equipamento'],
-                                          datestr_fmt='%Y-%m-%d %H:%M:%S.%f')
+#for sit in lista_sitios:
+#    #--SysUp Times----
+#    SvsCsvsMergerUtils.add_csvfile_to_drt(drt, os.path.join(DIR_BASE, sit+'_sysUps.csv'), delimitador=",",
+#                                          create_constant_cols=[[sit+'_SysUpDeslig', 1]], onlycols=['Equipamento'],
+#                                          create_cols_from_values_for_cols=['Equipamento'],
+#                                          datestr_fmt='%Y-%m-%d %H:%M:%S.%f')
 
 #---Dados dos Chamados--
 #Chamados por Sitio  e tambem por SITIO_ID

@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2018-06-30 00:59:44.0,2018-06-30 01:22:05.0,1341,MSRPATJ_SWL3_proxy04,Trunk321,
+2018-06-30 16:39:35.0,2018-06-30 18:04:05.0,5070,MSRPATJ_SWL3_proxy04,Trunk321,
+2018-07-07 01:00:14.0,2018-07-07 01:22:24.0,1330,MSRPATJ_SWL3,ifOperStatus[Trunk Port ID 0001],

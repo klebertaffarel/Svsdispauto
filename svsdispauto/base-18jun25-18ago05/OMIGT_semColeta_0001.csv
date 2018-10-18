@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2018-06-30 00:59:54.0,2018-06-30 01:22:11.0,1337,MSOMIGT_SWL3,ifOperStatus[Trunk Port ID 0001],
+2018-06-30 16:39:15.0,2018-06-30 18:03:44.0,5069,MSOMIGT_SWL3_proxy05,Trunk321,
+2018-07-07 00:59:54.0,2018-07-07 01:22:26.0,1352,MSOMIGT_SWL3,ifOperStatus[Trunk Port ID 0001],
