@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e2a62d4-aef6-484e-9d8c-27139a60df1f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/base_chamados_bak.csv" afterPath="$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/base_chamados_bak.csv" />
-    </list>
+    <list default="true" id="1e2a62d4-aef6-484e-9d8c-27139a60df1f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +14,30 @@
       <file leaf-file-name="svs_dispcalc_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svsdispauto/svs_dispcalc_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="147" lean-forward="false" selection-start-line="25" selection-start-column="147" selection-end-line="25" selection-end-column="147" />
+            <state relative-caret-position="509">
+              <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RPMMA_semColeta_0002.csv" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_semColeta_0002.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RPMMA_semColeta_0001.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_semColeta_0001.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -26,68 +46,28 @@
       <file leaf-file-name="enlaces_base.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enlaces_base.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="379">
+              <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enlaces_base_ori.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enlaces_base_ori.csv">
+      <file leaf-file-name="RPMMA_operNok_0002.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_operNok_0002.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_chamados_bak.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/base_chamados_bak.csv">
+      <file leaf-file-name="SvsCsvsMergerUtils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svsdispauto/SvsCsvsMergerUtils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="59" column="63" lean-forward="true" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_chamados.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jun30/base_chamados.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="63" column="10" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_chamados.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul23/base_chamados.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_chamados.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago31/base_chamados.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_chamados.csv" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jun25-18ago05/base_chamados.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="35" column="60" lean-forward="false" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,6 +91,11 @@
       <find>int</find>
       <find>base_chamados</find>
       <find>JRD</find>
+      <find>OMAMB</find>
+      <find>OMJRD</find>
+      <find>OMMNO</find>
+      <find>OMPPR</find>
+      <find>RPJRD</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto</dir>
@@ -122,42 +107,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/svsdispauto/svs_cvswriter.py" />
-        <option value="$PROJECT_DIR$/teste_spk_search.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/svs_calc_disponibilidade.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/SvsSCP.py" />
-        <option value="$PROJECT_DIR$/enlaces_temp.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/SvsDateRangesTable.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/SvsCsvColumnToSlotTimes.py" />
-        <option value="$PROJECT_DIR$/enlaces_teste.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/spk_executor.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/SvsCsvsMergerUtils.py" />
-        <option value="$PROJECT_DIR$/enlac_corrig.csv" />
-        <option value="$PROJECT_DIR$/svs_gerador_subperiodos.py" />
-        <option value="$PROJECT_DIR$/teste_datas.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/svs_dispcalc_gerador_consulta_splunk.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/saida.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-17set10-18jun30/base_chamados.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-17set10-18jul23/OMCGR_semColeta_0001.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/consolidacao_disponibilidade_2018jul01_2018jul31.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/RPFDI_semColeta_0001.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31.bak/base_chamados.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/svs_dispcalc_enlace.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/base_chamados.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/spk_searchs_factory.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/base_chamados.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/base_chamados_bak.csv" />
-        <option value="$PROJECT_DIR$/enlaces_base_ori.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/OMNOQ_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/OMPPR_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/OMRCB_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMB_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMB_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMB_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMO1_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMO1_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMO_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMO_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPATJ_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPATJ_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPBND_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPCGR_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPCGR_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPDOU_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPDOU_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPFDI_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPFGR_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMPX_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMPX_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMPX_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMRD_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMRD_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMRD_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS1_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS1_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNOQ_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNOQ_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNOQ_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNVL_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNVL_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNVL_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0004.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPRBR_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPRBR_semColeta_0002.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPSPE_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTCU_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTCU_semColeta_0003.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTRN_semColeta_0001.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTRN_semColeta_0002.csv" />
         <option value="$PROJECT_DIR$/enlaces_base.csv" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-17set10-18ago31/base_chamados.csv" />
+        <option value="$PROJECT_DIR$/svsdispauto/base-18nov30-19jan02/RPJRD_semColeta_0002.csv" />
         <option value="$PROJECT_DIR$/svsdispauto/svs_dispcalc_manager.py" />
-        <option value="$PROJECT_DIR$/svsdispauto/base-18jun25-18ago05/base_chamados.csv" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="108" />
-    <option name="y" value="67" />
+    <option name="x" value="-303" />
+    <option name="y" value="182" />
     <option name="width" value="1928" />
     <option name="height" value="1088" />
   </component>
@@ -193,14 +199,14 @@
               <item name="svsdispauto" type="b2602c69:ProjectViewProjectNode" />
               <item name="svsdispauto" type="462c0819:PsiDirectoryNode" />
               <item name="svsdispauto" type="462c0819:PsiDirectoryNode" />
-              <item name="base-18jun25-18ago05" type="462c0819:PsiDirectoryNode" />
+              <item name="base-18nov30-19jan03" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,14 +214,15 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto\svsdispauto" />
-      <recent name="C:\rodrigo\svsdispauto\svsdispauto\base-17set01-18abr15" />
-      <recent name="C:\rodrigo\svsdispauto\svsdispauto" />
-      <recent name="C:\rodrigo\svsdispauto" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto\svsdispauto\base-18nov30-19jan03" />
+      <recent name="C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto" />
+      <recent name="C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto\svsdispauto\base-18set30-18nov01.bak" />
+      <recent name="C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto\svsdispauto\base-18set30-18nov02" />
+      <recent name="C:\Users\ktaffarel.DC-NOC-SAVIS\PycharmProjects\svsdispauto\svsdispauto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -349,11 +356,10 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25052083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30517423" sideWeight="0.38489583" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30517423" sideWeight="0.61510414" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37275606" sideWeight="0.4109375" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37275606" sideWeight="0.5890625" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49583334" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -366,6 +372,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -389,225 +396,343 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul31/base_chamados.csv">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMO1_semColeta_0001.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="52" lean-forward="false" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul31/RPSPE_operNok_0001.csv">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMO_semColeta_0001.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul31/RPSPE_operNok_0002.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul31/OMAMB_operNok_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/RPNOQ_operNok_0003.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/RPNOQ_semColeta_0003.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/OMNOQ_operNok_0003.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/OMNOQ_semColeta_0003.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/RPNOQ_operNok_0001.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/svs_dispcalc_gerador_consulta_splunk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/RPNOQ_semColeta_0001.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/consolidacao_disponibilidade_2018jul01_2018jul31.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/base_chamados.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/RPSPE_operNok_0001.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jul01-18jul31/RPSPE_semColeta_0001.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/SvsCsvColumnToSlotTimes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="28" column="32" lean-forward="false" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/OMCGR_operNok_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/OMCGR_semColeta_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/SvsCsvsMergerUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/consolidacao_disponibilidade_2017set10_2018ago31.csv" />
-    <entry file="file://$PROJECT_DIR$/svsdispauto/spk_searchs_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="111" column="36" lean-forward="true" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/spk_executor.py">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPAMO_semColeta_0002.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/_strptime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/svs_dispcalc_enlace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="83" column="55" lean-forward="true" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/consolidacao_disponibilidade_2018ago25_2018out03.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jun30/RPMMA_operNok_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jun30/RPMMA_semColeta_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="77" lean-forward="true" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jun30/RPMMA_semColeta_0003.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jun30/RPMMA_operNok_0003.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago31/RPMMA_operNok_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago31/RPMMA_operNok_0002.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago31/RPMMA_semColeta_0002.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul23/RPMMA_operNok_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago29/RPJRD_semColeta_0002.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago29/RPMMA_operNok_0002.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul23/consolidacao_disponibilidade_2017set10_2018jun30_interno.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="104" lean-forward="false" selection-start-line="0" selection-start-column="104" selection-end-line="0" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul23/RPMMA_semColeta_0002.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul23/RPMMA_operNok_0002.csv">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPATJ_semColeta_0001.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago31/OMAMB_operNok_0001.csv">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPATJ_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/OMMNO_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPBND_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPCGR_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPCGR_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPDOU_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPFDI_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPFGR_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMPX_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPDOU_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMPX_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMRD_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMRD_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMRD_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMPX_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS1_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS1_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNAS_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNOQ_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNOQ_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNOQ_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNVL_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNVL_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPNVL_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPSPE_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPRBR_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPRBR_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPPPR_semColeta_0004.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTCU_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTCU_semColeta_0003.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTRN_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPTRN_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan02/RPJRD_semColeta_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan02/RPJRD_operNok_0002.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -615,98 +740,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jun25-18ago05/RPCGR_operNok_0001.csv">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPJRD_operNok_0002.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jun25-18ago05/RPCGR_semColeta_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jun25-18ago05/OMCGR_semColeta_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jun25-18ago05/OMCGR_operNok_0001.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enlaces_base_ori.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/enlaces_base.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18ago31/base_chamados.csv">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/SvsCsvsMergerUtils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_semColeta_0001.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enlaces_base.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_operNok_0002.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/svsdispauto/svs_dispcalc_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="147" lean-forward="false" selection-start-line="25" selection-start-column="147" selection-end-line="25" selection-end-column="147" />
-          <folding />
+        <state relative-caret-position="509">
+          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18ago25-18out03/base_chamados_bak.csv">
+    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18nov30-19jan03/RPMMA_semColeta_0002.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="59" column="63" lean-forward="true" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jun30/base_chamados.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="63" column="10" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-17set10-18jul23/base_chamados.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svsdispauto/base-18jun25-18ago05/base_chamados.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="35" column="60" lean-forward="false" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>

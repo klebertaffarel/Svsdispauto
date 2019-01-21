@@ -1,5 +1,4 @@
 dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
-2017-09-29 02:32:00.0,2017-10-06 11:28:16.0,636976,MSOMRCB_SWL3,ifOperStatus[Trunk Port ID 0003],
 2017-10-07 18:21:00.0,2017-10-07 19:24:09.0,3789,MSOMRCB_SWL3,ifOperStatus[Trunk Port ID 0003],
 2017-10-22 08:57:01.0,2017-10-22 09:54:45.0,3464,MSOMRCB_SWL3,ifOperStatus[Trunk Port ID 0003],
 2017-10-30 08:55:00.0,2017-10-30 09:49:27.0,3267,MSOMRCB_SWL3,ifOperStatus[Trunk Port ID 0003],
