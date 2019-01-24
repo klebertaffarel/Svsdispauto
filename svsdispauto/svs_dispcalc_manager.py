@@ -15,15 +15,15 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-18nov30-19jan03')
+DIR_BASE = os.path.join('.', 'base-18set30-18nov01')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018nov30_2019jan03.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018set30_2018nov01.csv'
 #CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
 CSV_MATRIZ_DELIMITADOR = ','
 
 #--CONFIG DOS CHAMADOS---------------------------
 CSV_CHAMADOS = 'base_chamados.csv'
-CHAMADOS_LISTA_IDS = [1804,1817,1824,1828,1844,1845,1841,1847,1864,1878,1900,1910, 1916, 1917]
+CHAMADOS_LISTA_IDS = [468, 559, 570, 1034,1042, 1106, 1128, 1245 ,1251, 1166, 1265, 1276, 1371, 1372, 1417, 1433, 1459, 1471, 1482, 1509,1520,1523,1526,1531,1542,1543,1624,1692,1715,1719,1720,1721,1722,1727,1732,1735,1748,1749]
 
 #--CSV com Info dos Enlaces------------------------
 CSV_ENLACES_FILEPATH = os.path.join('..', 'enlaces_base.csv')
@@ -39,8 +39,8 @@ CSV_FIELD_SITIO_HORIZ_B = 'HORIZ. B'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2018-11-30 00:00:00', '%Y-%m-%d %H:%M:%S')
-report_end = datetime.datetime.strptime('2019-01-03 23:59:59', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2018-09-30 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_end = datetime.datetime.strptime('2018-11-01 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
 
@@ -200,6 +200,7 @@ print lista_enlaces
 #                         spk_operstatus_source=SPK_OPERSTATUS_SOURCE)
 
 
+
 #====================== EXTRACAO DADOS SITIOS ============================================================
 #for sit in lista_sitios:
 #     #Extrai dados especificos do sitio
@@ -208,9 +209,12 @@ print lista_enlaces
 #                        spk_sysups_sourcetype=SPK_SYSUPS_SOURCETYPE,
 #                        spk_sysups_source=SPK_SYSUPS_SOURCE)
 
+
 #====================== EXTRACAO DOS CHAMADOS ============================================================
 #extrai_base_chamados(lista_chamados=CHAMADOS_LISTA_IDS, dir_base=DIR_BASE, csv_output=CSV_CHAMADOS,
 #                     spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim)
+
+
 
 
 #====================== CONSOLIDACAO DE MATRIZ COMPLETA ============================================================
@@ -261,6 +265,7 @@ SvsCsvsMergerUtils.add_csvfile_to_drt(drt, os.path.join(DIR_BASE, CSV_CHAMADOS),
                                           create_constant_cols=[['Chamados_Desconto', 1]], onlycols=['chamados', 'localidade_id'],
                                           create_cols_from_values_for_cols=['chamados', 'localidade_id'],
                                           datestr_fmt='%Y-%m-%d %H:%M:%S')
+
 
 drt.print_list(include_cols=True)
 
