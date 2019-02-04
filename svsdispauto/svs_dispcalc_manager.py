@@ -15,9 +15,9 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-18set30-18nov01')
+DIR_BASE = os.path.join('.', 'base-18out31-18dez03')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018set30_2018nov01.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018out31_2018dez03.csv'
 #CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
 CSV_MATRIZ_DELIMITADOR = ','
 
@@ -36,11 +36,12 @@ CSV_FIELD_SITIO_VERT_A = 'VERT. A'
 CSV_FIELD_SITIO_VERT_B = 'VERT. B'
 CSV_FIELD_SITIO_HORIZ_A = 'HORIZ. A'
 CSV_FIELD_SITIO_HORIZ_B = 'HORIZ. B'
+CSV_FIELD_DATA_ATIVACAO = 'DATA ATIVACAO'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2018-09-30 00:00:00', '%Y-%m-%d %H:%M:%S')
-report_end = datetime.datetime.strptime('2018-11-01 23:59:59', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2018-11-30 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_end = datetime.datetime.strptime('2019-01-03 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
 
@@ -145,7 +146,6 @@ for period in periodos_referencia:
     drt.add_data(period[0], period[1], period[2])
 
 
-
 #====================== CARREGA DADOS DOS ENLACES ============================================================
 f = open(CSV_ENLACES_FILEPATH, 'r')
 aux_linhas = f.readlines()
@@ -163,7 +163,8 @@ aux_enlace_headers_dict = {
     CSV_FIELD_SITIO_HORIZ_A: aux_enlaces_headers.index(CSV_FIELD_SITIO_HORIZ_A),
     CSV_FIELD_SITIO_HORIZ_B: aux_enlaces_headers.index(CSV_FIELD_SITIO_HORIZ_B),
     CSV_FIELD_SITIO_VERT_A: aux_enlaces_headers.index(CSV_FIELD_SITIO_VERT_A),
-    CSV_FIELD_SITIO_VERT_B: aux_enlaces_headers.index(CSV_FIELD_SITIO_VERT_B)
+    CSV_FIELD_SITIO_VERT_B: aux_enlaces_headers.index(CSV_FIELD_SITIO_VERT_B),
+    CSV_FIELD_DATA_ATIVACAO: aux_enlaces_headers.index(CSV_FIELD_DATA_ATIVACAO)
 }
 if DEBUG_MODE: print aux_enlace_headers_dict
 
@@ -179,6 +180,7 @@ for li in aux_enlaces:
         'sitio_B': li[aux_enlace_headers_dict.get(CSV_FIELD_SITIO_B)],
         'trunk': li[aux_enlace_headers_dict.get(CSV_FIELD_SITIO_TRUNK)].zfill(4),
         'trunk_bkp': li[aux_enlace_headers_dict.get(CSV_FIELD_SITIO_TRUNK)],
+        'data_ativacao': li[aux_enlace_headers_dict.get(CSV_FIELD_DATA_ATIVACAO)]
     }
     lista_enlaces.append(dict_enlace)
     lista_sitios.add(li[aux_enlace_headers_dict.get(CSV_FIELD_SITIO_A)])
@@ -196,7 +198,7 @@ print lista_enlaces
 #     #Extrai os dados de gerais do enlace
 #     extrai_dados_enlace(sitio_A=enl['sitio_A'], sitio_B=enl['sitio_B'], trunk=enl['trunk'],trunk_bkp=enl['trunk_bkp'], dir_base=DIR_BASE,
 #                         spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
-#                         spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,
+#                        spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,
 #                         spk_operstatus_source=SPK_OPERSTATUS_SOURCE)
 
 
@@ -216,10 +218,30 @@ print lista_enlaces
 
 
 
-
 #====================== CONSOLIDACAO DE MATRIZ COMPLETA ============================================================
 #---Dados dos Enlaces--
 for enl in lista_enlaces:
+    #Add Rodrigo/Taffarel 24/jan/2019 - Coluna informando (com 0 e 1) o periodo que o enlace estava ATIVO. Considera-se a data "final" como a data final do relatorio sendo gerado.
+    #--Gera um objeto Datetime com a data de inicio
+    enlace_ativ_inicio = datetime.datetime.strptime(enl['data_ativacao'], '%Y-%m-%d %H:%M:%S')
+    #--Para definir o INICIO, compara os periodos que o Relatorio esta sendo gerado com o do enlace, de modo a obter uma INTERSECAO dos periodos. Isto pode ser feito pegando a MAIOR data entre os dois
+    enlace_ativ_inicio = max(enlace_ativ_inicio, report_ini)
+    #--Recupera objeto Datetime com o periodo final do relatorio
+    enlace_ativ_termino = report_end
+    #Apenas acrescenta valores caso a data de ativacao seja MENOR do que a data final do Relatorio. Caso contrario, acrescenta uma coluna em branco
+
+
+    enlace_ativo_nome_coluna = enl['sitio_A'] + 'x' + enl['sitio_B'] + "_ativado"
+    if enlace_ativ_inicio <= report_end:
+        #--Acrescenta uma coluna na matriz indicando com "1" este periodo que o enlace esteve ativo
+        #--Nome da Coluna: SITIO_Ax_Sitio_B_ativo
+        #enlace_ativo_nome_coluna = enl['sitio_A'] + 'x' + enl['sitio_B'] + "_ativado"
+        #--Acrescenta na Matriz Completa
+        drt.add_data(enlace_ativ_inicio, enlace_ativ_termino, {enlace_ativo_nome_coluna: 1})
+    else:
+        #Apenas acrescenta uma coluna vazia
+        drt.add_data(report_ini, report_end, {enlace_ativo_nome_coluna: ""})
+
     # # --OperStatus SemColeta Periodos BINARIOS - Sitio A
     # SvsCsvsMergerUtils.add_csvfile_to_drt(drt, os.path.join(DIR_BASE, enl['sitio_A']+'_semColeta_'+ enl['trunk'] +'.csv'), delimitador=",",
     #                                       create_constant_cols=[[enl['sitio_A']+'_SCol_'+enl['trunk'], 1]], onlycols=[],
