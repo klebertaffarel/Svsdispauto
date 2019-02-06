@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2019-01-22 05:48:17.0,2019-01-22 05:53:31.0,314,MSOMPPR_SWL3,ifOperStatus[Trunk Port ID 0002],
+2019-01-22 05:55:17.0,2019-01-22 05:59:24.0,247,MSOMPPR_SWL3,ifOperStatus[Trunk Port ID 0002],
+2019-01-22 06:31:17.0,2019-01-22 06:33:58.0,161,MSOMPPR_SWL3,ifOperStatus[Trunk Port ID 0002],

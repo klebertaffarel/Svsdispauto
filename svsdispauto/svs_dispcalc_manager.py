@@ -15,9 +15,9 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-18out31-18dez03')
+DIR_BASE = os.path.join('.', 'base-18ago25-18out03')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018out31_2018dez03.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018ago25_2018out03.csv'
 #CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
 CSV_MATRIZ_DELIMITADOR = ','
 
@@ -40,8 +40,8 @@ CSV_FIELD_DATA_ATIVACAO = 'DATA ATIVACAO'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2018-11-30 00:00:00', '%Y-%m-%d %H:%M:%S')
-report_end = datetime.datetime.strptime('2019-01-03 23:59:59', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2018-08-25 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_end = datetime.datetime.strptime('2018-10-03 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
 

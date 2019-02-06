@@ -150,7 +150,7 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
     template_sitio_chamados = '| eval <<<%HOST%>>>_<<<%TRUNK%>>>_chamados=IF(chamados_MS<<<%HOST%>>>==1 OR chamados_PR<<<%HOST%>>>==1,1,0)'
     #--Calcula a indisponibilidade do enlace
     #- HOST_AxHOST_B_indisp
-    template_enlace_indisp = "| eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_indisp==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_indisp==1,1,0)"
+    template_enlace_indisp = "| eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp=IF((<<<%HOST_A%>>>x<<<%HOST_B%>>>_ativado==1) AND (<<<%HOST_A%>>>_<<<%TRUNK%>>>_indisp==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_indisp==1),1,0)"
     #- HOST_AxHOST_B_classifind_tempo
     template_enlace_classifind_tempo = '| eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_classifind_tempo=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp==1, max(<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo,<<<%HOST_B%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo),"")'
     #- HOST_AxHOST_B_classifind
@@ -175,10 +175,11 @@ def search_matriz_disponibilidade(lista_enlaces, lista_sitios, arquivo_matriz=No
     # --A linha abaixo foi removida por nao utilizar mais os dados de sysuptime
     #template_enlace_sombra = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_sombra=IF( (<<<%HOST_A%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP) AND (<<<%HOST_B%>>>_SColTempo_<<<%TRUNK%>>>_delta_tempo > CFG_THRESH_DISP) AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_sysup_deslig==0,1,0)"
     #- HOST_AxHOST_B_intermitencia
-    template_enlace_intermitencia = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_intermitencia=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_intermit==1,1,0)"
+    template_enlace_intermitencia = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_intermitencia=IF((<<<%HOST_A%>>>x<<<%HOST_B%>>>_ativado==1) AND (<<<%HOST_A%>>>_<<<%TRUNK%>>>_intermit==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_intermit==1),1,0)"
     #- HOST_AxHOST_B_indisp
     template_enlace_indisp_intermit = "| eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp_intermit=IF(<<<%HOST_A%>>>x<<<%HOST_B%>>>_indisp==1 AND <<<%HOST_A%>>>x<<<%HOST_B%>>>_intermitencia==0,1,0)"
     #- HOST_AxHOST_B_chamados
+    #-Nao precisa ajustar com a informacao de Enlace ATIVADO porque este eh um campo para MELHORAR
     template_enlace_chamados = "|eval <<<%HOST_A%>>>x<<<%HOST_B%>>>_chamados=IF(<<<%HOST_A%>>>_<<<%TRUNK%>>>_chamados==1 OR <<<%HOST_B%>>>_<<<%TRUNK%>>>_chamados==1,1,0)"
     #- HOST_AxHOST_B_indisp_sombras
     # --A linha abaixo foi removida por nao utilizar mais os dados de sombra
