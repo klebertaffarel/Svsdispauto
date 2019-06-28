@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2019-04-01 05:30:22.0,2019-04-01 05:32:52.0,150,MSRPAMB_SWL3,ifOperStatus[Trunk Port ID 0001],
+2019-04-18 07:37:52.0,2019-04-18 07:41:52.0,240,MSRPAMB_SWL3,ifOperStatus[Trunk Port ID 0001],
+2019-04-18 08:14:52.0,2019-04-18 08:17:52.0,180,MSRPAMB_SWL3,ifOperStatus[Trunk Port ID 0001],

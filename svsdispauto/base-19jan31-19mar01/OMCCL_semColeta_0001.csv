@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2019-02-11 07:50:30.0,2019-02-11 16:07:52.0,29842,MSOMCCL_SWL3_proxy04,Trunk321,
+2019-02-19 14:39:29.0,2019-02-19 14:42:32.0,183,MSOMCCL_SWL3,ifOperStatus[Trunk Port ID 0001],
+2019-02-19 14:42:32.0,2019-02-19 14:45:59.0,207,MSOMCCL_SWL3_proxy04,Trunk321,

@@ -15,16 +15,16 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-18ago25-18out03')
+DIR_BASE = os.path.join('.', 'base-19abr30-19jun01')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2018ago25_2018out03.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2019abr30_2019jun01.csv'
 #CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
 CSV_MATRIZ_DELIMITADOR = ','
 
 #--CONFIG DOS CHAMADOS---------------------------
 CSV_CHAMADOS = 'base_chamados.csv'
-CHAMADOS_LISTA_IDS = [468, 559, 570, 1034,1042, 1106, 1128, 1245 ,1251, 1166, 1265, 1276, 1371, 1372, 1417, 1433, 1459, 1471, 1482, 1509,1520,1523,1526,1531,1542,1543,1624,1692,1715,1719,1720,1721,1722,1727,1732,1735,1748,1749]
-
+#CHAMADOS_LISTA_IDS = [468, 559, 570, 1034,1042, 1106, 1128, 1245 ,1251, 1166, 1265, 1276, 1371, 1372, 1417, 1433, 1459, 1471, 1482, 1509,1520,1523,1526,1531,1542,1543,1624,1692,1715,1719,1720,1721,1722,1727,1732,1735,1748,1749]
+CHAMADOS_LISTA_IDS = [1749]
 #--CSV com Info dos Enlaces------------------------
 CSV_ENLACES_FILEPATH = os.path.join('..', 'enlaces_base.csv')
 #CSV_ENLACES_FILEPATH = os.path.join('..', 'enlaces_teste.csv')
@@ -40,8 +40,8 @@ CSV_FIELD_DATA_ATIVACAO = 'DATA ATIVACAO'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2018-08-25 00:00:00', '%Y-%m-%d %H:%M:%S')
-report_end = datetime.datetime.strptime('2018-10-03 23:59:59', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2019-04-30 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_end = datetime.datetime.strptime('2019-06-01 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
 
@@ -195,10 +195,10 @@ print lista_enlaces
 
 #====================== EXTRACAO DADOS ENLACES ============================================================
 #for enl in lista_enlaces:
-#     #Extrai os dados de gerais do enlace
+#    #Extrai os dados de gerais do enlace
 #     extrai_dados_enlace(sitio_A=enl['sitio_A'], sitio_B=enl['sitio_B'], trunk=enl['trunk'],trunk_bkp=enl['trunk_bkp'], dir_base=DIR_BASE,
 #                         spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
-#                        spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,
+#                         spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,
 #                         spk_operstatus_source=SPK_OPERSTATUS_SOURCE)
 
 
@@ -215,7 +215,6 @@ print lista_enlaces
 #====================== EXTRACAO DOS CHAMADOS ============================================================
 #extrai_base_chamados(lista_chamados=CHAMADOS_LISTA_IDS, dir_base=DIR_BASE, csv_output=CSV_CHAMADOS,
 #                     spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim)
-
 
 
 #====================== CONSOLIDACAO DE MATRIZ COMPLETA ============================================================
@@ -297,9 +296,6 @@ drt.export_csv(aux_filepath_saida, delimitador=CSV_MATRIZ_DELIMITADOR)
 
 #====================== ENVIO AO SPLUNK ============================================================
 SvsSCP.envia_arquivo(aux_filepath_saida, dest_mat_scp_dir, dest_mat_scp_host, dest_mat_scp_user, dest_mat_scp_pwd)
-
-
-
 
 
 
