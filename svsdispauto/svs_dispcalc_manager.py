@@ -15,11 +15,12 @@ from svsdispauto.svs_dispcalc_enlace import extrai_dados_enlace, extrai_dados_si
 #====================== CONFIGURACOES ========================================================================
 DEBUG_MODE=True
 
-DIR_BASE = os.path.join('.', 'base-19abr30-19jun01')
+DIR_BASE = os.path.join('.', 'base-20mar31-20mai01')
 
-CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2019abr30_2019jun01.csv'
-#CSV_MATRIZ_OUTFILE = 'bbbbconsolidacao_disponibilidade_2017set01_2018abr15.csv'
+CSV_MATRIZ_OUTFILE = 'consolidacao_disponibilidade_2020mar31_2020mai01.csv'
 CSV_MATRIZ_DELIMITADOR = ','
+
+
 
 #--CONFIG DOS CHAMADOS---------------------------
 CSV_CHAMADOS = 'base_chamados.csv'
@@ -40,8 +41,8 @@ CSV_FIELD_DATA_ATIVACAO = 'DATA ATIVACAO'
 
 
 #Periodo desejado dos dados
-report_ini = datetime.datetime.strptime('2019-04-30 00:00:00', '%Y-%m-%d %H:%M:%S')
-report_end = datetime.datetime.strptime('2019-06-01 23:59:59', '%Y-%m-%d %H:%M:%S')
+report_ini = datetime.datetime.strptime('2020-03-31 00:00:00', '%Y-%m-%d %H:%M:%S')
+report_end = datetime.datetime.strptime('2020-05-01 23:59:59', '%Y-%m-%d %H:%M:%S')
 CFG_MATRIZ_QUEBRAPOR_MES = True
 CFG_MATRIZ_QUEBRAPOR_DIA = True
 
@@ -49,7 +50,7 @@ CFG_MATRIZ_QUEBRAPOR_DIA = True
 #Splunk
 SPK_HOST = '10.254.22.79'
 SPK_USER = 'admin'
-SPK_PASSWD = 'nocnoc'
+SPK_PASSWD = 'SplunkN0c'
 
 #Splunk - Fontes de dados
 #zabdb_history
@@ -84,8 +85,8 @@ SPK_OPERSTATUS_SOURCETYPE='novo_zabdb_history*'
 #Envio da Matriz ao Splunk
 dest_mat_scp_host='10.254.22.79'
 dest_mat_scp_user='root'
-dest_mat_scp_pwd ='algar2016'
-dest_mat_scp_dir = '/var/opt/splunk/var/run/splunk/csv/'
+dest_mat_scp_pwd ='s@visn0c'
+dest_mat_scp_dir = '/opt/splunk/var/run/splunk/csv/'
 
 
 
@@ -195,7 +196,7 @@ print lista_enlaces
 
 #====================== EXTRACAO DADOS ENLACES ============================================================
 #for enl in lista_enlaces:
-#    #Extrai os dados de gerais do enlace
+#   #Extrai os dados de gerais do enlace
 #     extrai_dados_enlace(sitio_A=enl['sitio_A'], sitio_B=enl['sitio_B'], trunk=enl['trunk'],trunk_bkp=enl['trunk_bkp'], dir_base=DIR_BASE,
 #                         spk_executor_ref=spk_executor, spk_earliest=spk_periodo_ini, spk_latest=spk_periodo_fim,
 #                         spk_operstatus_sourcetype=SPK_OPERSTATUS_SOURCETYPE,

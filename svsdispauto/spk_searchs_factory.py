@@ -3,12 +3,30 @@ CFG_SPK_ZAB_SOURCETYPE='zabdb_history'
 
 
 
+#def search_operstatus_semcoleta(host_swl3, trunk, trunk_bkp, spk_index=CFG_SPK_ZAB_INDEX, spk_sourcetype=CFG_SPK_ZAB_SOURCETYPE, spk_source=None):
+#    str_search = """
+#        search index="<<<%SPK_INDEX%>>>" sourcetype=<<<%SPK_SOURCETYPE%>>> source="<<<%SPK_SOURCE%>>>"
+#        | lookup tstrod_lookups_items.csv itemid
+#        | lookup tstrod_lookups_hosts.csv hostid
+#        | search host_name="*<<<%HOST%>>>*" AND item_key=*Trunk*Port*ID*<<<%TRUNK%>>>* OR item_key=*Trunk32<<<%TRUNK_BKP%>>>*
+#        | sort 0 _time
+#        | streamstats current=true window=2 earliest(clock) as last_clock, earliest(itemid) as last_itemid, earliest(datetime) as last_datetime
+#        | eval diff_itemid=last_itemid - itemid
+#        | eval last_clock = last_clock
+#        | eval delta_tempo = (clock - last_clock)
+#        | eval is_faltacoleta = IF((_time > strptime("2017-09-20 19:50", "%Y-%m-%d %H:%M") AND delta_tempo >= 2.5*60) OR (_time <= strptime("2017-09-20 19:50", "%Y-%m-%d %H:%M") AND delta_tempo > 2.5*300), 1, 0)
+#        | eval is_faltacoleta = IF(delta_tempo > 3500 AND delta_tempo <= 3800 AND (strftime(_time, "%Y-%m-%d %H")="2018-02-17 23" OR strftime(_time, "%Y-%m-%d %H")="2018-02-18 00"),0,is_faltacoleta)
+#        | where  is_faltacoleta=1
+#        | table last_datetime, datetime, host_name, item_key, delta_tempo
+#        | rename last_datetime AS dh_inicio, datetime as dh_termino, host_name AS Equipamento, item_key AS Trunk
+#        """
+
 def search_operstatus_semcoleta(host_swl3, trunk, trunk_bkp, spk_index=CFG_SPK_ZAB_INDEX, spk_sourcetype=CFG_SPK_ZAB_SOURCETYPE, spk_source=None):
     str_search = """
-        search index="<<<%SPK_INDEX%>>>" sourcetype=<<<%SPK_SOURCETYPE%>>> source="<<<%SPK_SOURCE%>>>"
+        search index="<<<%SPK_INDEX%>>>" source="<<<%SPK_SOURCE%>>>" OR source="novo_import_proxybkp_statusoper_000<<<%TRUNK_BKP%>>>"
         | lookup tstrod_lookups_items.csv itemid
         | lookup tstrod_lookups_hosts.csv hostid  
-        | search host_name="*<<<%HOST%>>>*" AND item_key=*Trunk*Port*ID*<<<%TRUNK%>>>* OR item_key=*Trunk32<<<%TRUNK_BKP%>>>*
+        | search host_name="*<<<%HOST%>>>*" 
         | sort 0 _time
         | streamstats current=true window=2 earliest(clock) as last_clock, earliest(itemid) as last_itemid, earliest(datetime) as last_datetime
         | eval diff_itemid=last_itemid - itemid
@@ -20,6 +38,7 @@ def search_operstatus_semcoleta(host_swl3, trunk, trunk_bkp, spk_index=CFG_SPK_Z
         | table last_datetime, datetime, host_name, item_key, delta_tempo
         | rename last_datetime AS dh_inicio, datetime as dh_termino, host_name AS Equipamento, item_key AS Trunk
         """
+
     str_search = str_search.replace("<<<%SPK_INDEX%>>>", str(spk_index))
     str_search = str_search.replace("<<<%SPK_SOURCETYPE%>>>", str(spk_sourcetype))
     str_search = str_search.replace("<<<%SPK_SOURCE%>>>", str(spk_source))

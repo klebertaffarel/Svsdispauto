@@ -1,0 +1,6 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2019-12-05 18:20:34.0,2019-12-05 18:23:32.0,178,MSRPFSJ_SWL3,ifOperStatus[Trunk Port ID 0003],
+2019-12-07 07:21:33.0,2019-12-07 07:26:32.0,299,MSRPFSJ_SWL3,ifOperStatus[Trunk Port ID 0003],
+2019-12-16 02:51:33.0,2019-12-16 02:55:32.0,239,MSRPFSJ_SWL3,ifOperStatus[Trunk Port ID 0002],
+2019-12-26 07:52:03.0,2019-12-26 07:56:32.0,269,MSRPFSJ_SWL3,ifOperStatus[Trunk Port ID 0003],
+2019-12-30 05:12:32.0,2019-12-30 05:16:32.0,240,MSRPFSJ_SWL3,ifOperStatus[Trunk Port ID 0002],

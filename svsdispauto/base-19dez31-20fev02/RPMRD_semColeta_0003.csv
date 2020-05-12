@@ -1,0 +1,4 @@
+dh_inicio,dh_termino,delta_tempo,Equipamento,Trunk,item_key
+2020-01-01 04:01:33.0,2020-01-01 04:05:13.0,220,MSRPMRD_SWL3,ifOperStatus[Trunk Port ID 0003],
+2020-01-01 07:39:33.0,2020-01-01 07:42:13.0,160,MSRPMRD_SWL3,ifOperStatus[Trunk Port ID 0003],
+2020-01-08 18:35:13.0,2020-01-08 18:39:13.0,240,MSRPMRD_SWL3,ifOperStatus[Trunk Port ID 0003],
